@@ -112,16 +112,16 @@ public class XMLWriterUtil {
 		YElement.appendChild(doc.createTextNode(String.valueOf(positionY)));
 		positionElement.appendChild(YElement);
 		
+		// Move elements
+		Element moveElement = doc.createElement(ApplicationConstants.MOVE);
+		rootElement.appendChild(moveElement);
+		
 		List<?> moveArray = (List<?>) jsonObj.get(ApplicationConstants.MOVE);
 		Map<?, ?> mapObj = null;
 		for (Object obj : moveArray) {
 
 			mapObj = (Map<?, ?>) obj;
 			
-			// Position elements
-			Element moveElement = doc.createElement(ApplicationConstants.MOVE);
-			rootElement.appendChild(moveElement);
-
 			// Order elements
 			Element order = doc.createElement(ApplicationConstants.ORDER);
 			order.appendChild(doc.createTextNode(String.valueOf(mapObj.get(ApplicationConstants.ORDER))));
