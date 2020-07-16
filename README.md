@@ -38,7 +38,7 @@ Sample Output:
 
 Here Position attribute denotes the current position of the roverbot and Move attribute denotes the moves to be walked by the roverbot.
 
-2) Second API: This will read the current position of the bot and return it as API response.
+2) Second API: This will read the current position of the bot and return it as API response. API end-point call should be made to URL (<localhost/URL>/api/v1/roverbot). The API accepts a GET method and returns the current position of the roverbot.
 
 Sample Output:
 
